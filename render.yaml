@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: co2-footprint
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn co2_footprint.wsgi:application
+    envVars:
+      - key: DATABASE_URL
+        value: your_mysql_connection_url
