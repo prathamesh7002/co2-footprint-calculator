@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carbon footprint calculator</title>
+</head>
+<body>
+        <h1>carbon footprint calculator</h1>
+        <h2>Enter your details</h2>
+    
+        <form method="POST" action="{% url 'submit_user' %}">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Your full name" /><br><br>
+            <label for="electricity">Electricity:</label>
+            <input type="number" name="electricity" placeholder="Electricity (kWh/day)" /><br><br>
+            <label for="travel">Travel:</label>
+            <input type="number" name="travel" placeholder="Travel (km/day)" /><br><br>
+            <label for="elctronics_devices">Elctronics_devices:</label>
+            <input type="number" name="elctronics_devices" placeholder="Electronics usage (hrs/day)" /><br><br>
+            <label for="food_habbit">Food_habbit:</label>
+            <input type="text" name="food_habbit" placeholder="Food habit (veg/nonveg)" /><br><br>
+            <label for="water">Water:</label>
+            <input type="number" name="water" placeholder="Water usage (lit/day)" /><br><br>
+            <label for="waste">Waste:</label>
+            <input type="number" name="waste" placeholder="Waste (kg/day)" /><br><br>
+            <button type="submit">Submit</button>
+        </form>
+</body>
+</html>
