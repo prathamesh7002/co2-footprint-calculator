@@ -20,6 +20,6 @@ from co2_footprint import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',views.index),
+    path('',views.index),
     path('submit/', views.submit_user, name='submit_user'),
 ]
