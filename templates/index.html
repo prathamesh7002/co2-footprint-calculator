@@ -3,29 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carbon footprint calculator</title>
+    <title>Carbon Footprint Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 94%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-        <h1>carbon footprint calculator</h1>
+    <div>
+        <h1>Carbon Footprint Calculator</h1>
         <h2>Enter your details</h2>
     
         <form method="POST" action="{% url 'submit_user' %}">
             {% csrf_token %}
             <label for="name">Name:</label>
-            <input type="text" name="name" placeholder="Your full name" /><br><br>
+            <input type="text" name="name" placeholder="Your full name" /><br>
             <label for="electricity">Electricity:</label>
-            <input type="number" name="electricity" placeholder="Electricity (kWh/day)" /><br><br>
+            <input type="number" name="electricity" placeholder="Electricity (kWh/day)" /><br>
             <label for="travel">Travel:</label>
-            <input type="number" name="travel" placeholder="Travel (km/day)" /><br><br>
-            <label for="elctronics_devices">Elctronics_devices:</label>
-            <input type="number" name="elctronics_devices" placeholder="Electronics usage (hrs/day)" /><br><br>
-            <label for="food_habbit">Food_habbit:</label>
-            <input type="text" name="food_habbit" placeholder="Food habit (veg/nonveg)" /><br><br>
+            <input type="number" name="travel" placeholder="Travel (km/day)" /><br>
+            <label for="elctronics_devices">Electronics Devices:</label>
+            <input type="number" name="elctronics_devices" placeholder="Electronics usage (hrs/day)" /><br>
+            <label for="food_habbit">Food Habit:</label>
+            <input type="text" name="food_habbit" placeholder="Food habit (veg/nonveg)" /><br>
             <label for="water">Water:</label>
-            <input type="number" name="water" placeholder="Water usage (lit/day)" /><br><br>
+            <input type="number" name="water" placeholder="Water usage (lit/day)" /><br>
             <label for="waste">Waste:</label>
-            <input type="number" name="waste" placeholder="Waste (kg/day)" /><br><br>
+            <input type="number" name="waste" placeholder="Waste (kg/day)" /><br>
             <button type="submit">Submit</button>
         </form>
+    </div>
 </body>
 </html>
