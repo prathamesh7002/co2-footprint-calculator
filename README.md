@@ -28,3 +28,5 @@ A simple Django web application that allows users to calculate their daily and y
    ```bash
    git clone https://github.com/prathamesh7002/co2-footprint-calculator.git
    cd co2-footprint-calculator
+**Deployed link **
+https://co2-footprint-calculator.onrender.com
